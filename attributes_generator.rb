@@ -5,19 +5,21 @@
 #
 # All rights reserved
 #
+# Description:
+#   Script used to generate a list of attributes
+#   that would be consumed by the our coobooks to import db schema changelogs
 
 require 'json'
-#
 source_path = ARGV[0]
 
 if ARGV.empty?
   puts "Syntax: #{$PROGRAM_NAME} /path/to/directory/containing/changelog/files/"
   exit
 end
-
 unless File.directory?(source_path)
   raise "#{source_path} is not a valid directory containing changelog files"
 end
+
 all_templates = Dir["#{source_path}/*"]
 
 #-- our changelog categories with

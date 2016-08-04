@@ -71,4 +71,4 @@ liquibase_section = {
 #-- print our json that will be used as a list of
 #-- attributes in chef environment
 #-- use the output without first and last braces { }
-puts liquibase_section.to_json
+puts JSON.pretty_generate(liquibase_section)

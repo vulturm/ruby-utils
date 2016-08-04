@@ -8,10 +8,10 @@
 
 require 'json'
 #
-source_path = ARGV[0] 
+source_path = ARGV[0]
 
 if ARGV.empty?
-  puts "Syntax: #{$0} /path/to/directory/containing/changelog/files/"
+  puts "Syntax: #{$PROGRAM_NAME} /path/to/directory/containing/changelog/files/"
   exit
 end
 

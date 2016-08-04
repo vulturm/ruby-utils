@@ -15,7 +15,7 @@ if ARGV.empty?
   exit
 end
 
-if File.directory?(source_path)
+unless File.directory?(source_path)
   raise "#{source_path} is not a valid directory containing changelog files"
 end
 all_templates = Dir["#{source_path}/*"]
